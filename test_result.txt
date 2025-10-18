@@ -1,0 +1,77 @@
+==========================================
+NFT Market Upgradeable - Test Results
+==========================================
+
+Compilation Status:
+  No files changed, compilation skipped
+
+==========================================
+Test Suite: test/NFTMarket.t.sol:NFTMarketTest
+Ran 8 tests
+==========================================
+
+--- V1 Basic Functionality Tests ---
+
+[PASS] testListNFT() (gas: 203734)
+  ✓ NFT listing functionality
+
+[PASS] testBuyNFT() (gas: 204117)
+  ✓ NFT purchase functionality
+
+[PASS] testDelistNFT() (gas: 161981)
+  ✓ NFT delisting functionality
+
+[PASS] testUpdatePrice() (gas: 207367)
+  ✓ Price update functionality
+
+
+--- Upgrade Test ---
+
+[PASS] testUpgradeToV2() (gas: 2210064)
+  ✓ Contract upgrade from V1 to V2
+  
+  Logs:
+    === Upgrade Test Passed ===
+    Seller before: 0x0000000000000000000000000000000000000002
+    Seller after:  0x0000000000000000000000000000000000000002
+    Price before:  1000000000000000000
+    Price after:   1000000000000000000
+
+
+--- V2 Signature Functionality Tests ---
+
+[PASS] testListNFTWithSignature() (gas: 2247618)
+  ✓ EIP-712 signature listing functionality
+  
+  Logs:
+    === Signature Listing Test Passed ===
+    Seller: 0xe05fcC23807536bEe418f142D19fa0d21BB0cfF7
+    Price: 1000000000000000000
+    Nonce used: 0
+
+[PASS] testSignatureReplayProtection() (gas: 2198591)
+  ✓ Nonce-based replay attack protection
+  
+  Logs:
+    === Replay Protection Test Passed ===
+
+[PASS] testExpiredSignature() (gas: 2139768)
+  ✓ Signature expiration validation
+  
+  Logs:
+    === Expired Signature Test Passed ===
+
+
+==========================================
+Final Results
+==========================================
+
+Suite result: ok. 8 passed; 0 failed; 0 skipped
+Time: finished in 9.31ms (15.08ms CPU time)
+
+Total: Ran 1 test suite in 5.02s (9.31ms CPU time)
+       8 tests passed, 0 failed, 0 skipped (8 total tests)
+
+==========================================
+✅ All Tests Passed Successfully!
+==========================================
