@@ -1,0 +1,27 @@
+# Compiler files
+cache/
+out/
+
+# Dependencies
+lib/
+
+# Broadcast logs
+broadcast/
+
+# Build info
+*.json
+!foundry.json
+!package.json
+
+# Dotenv file
+.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# GitHub workflows
+.github/
+.gitmodules
